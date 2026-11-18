@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+  experimental: {
+    agentUpgrade: "security",
+  },
   images: {
     // 75 is Next's default; 90 for the few hero images that need to stay crisp
     qualities: [75, 90],
