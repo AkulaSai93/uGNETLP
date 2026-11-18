@@ -54,9 +54,9 @@ export function ApplyForm() {
           Mobile number
         </label>
         <div
-          className={`flex flex-1 items-center rounded-[8px] sm:rounded-none ${mobileErr ? "ring-2 ring-accent/60 sm:ring-0" : ""}`}
+          className={`flex min-w-0 flex-1 items-center rounded-[8px] sm:rounded-none ${mobileErr ? "ring-2 ring-accent/60 sm:ring-0" : ""}`}
         >
-          <span className="pl-3.5 text-[15px] font-medium text-body">+91</span>
+          <span className="shrink-0 pl-3.5 text-[15px] font-medium leading-none text-body">+91</span>
           <input
             id="mobile"
             name="mobile"
@@ -64,13 +64,13 @@ export function ApplyForm() {
             inputMode="numeric"
             autoComplete="tel-national"
             maxLength={10}
-            placeholder="WhatsApp mobile number"
+            placeholder="WhatsApp number"
             value={mobile}
             onChange={(e) => setMobile(e.target.value.replace(/\D/g, "").slice(0, 10))}
             onBlur={() => setTouched((t) => ({ ...t, mobile: true }))}
             aria-invalid={mobileErr}
             aria-describedby="form-err"
-            className={`${field} pl-2`}
+            className={`${field} min-w-0 pl-2`}
           />
         </div>
         <span aria-hidden="true" className="hidden h-7 w-px bg-black/10 sm:block" />
@@ -88,28 +88,28 @@ export function ApplyForm() {
           onBlur={() => setTouched((t) => ({ ...t, name: true }))}
           aria-invalid={nameErr}
           aria-describedby="form-err"
-          className={`${field} flex-1 rounded-[8px] max-sm:border-t max-sm:border-black/[0.06] sm:rounded-none ${nameErr ? "ring-2 ring-accent/60 sm:ring-0" : ""}`}
+          className={`${field} min-w-0 flex-1 rounded-[8px] max-sm:border-t max-sm:border-black/[0.06] sm:rounded-none ${nameErr ? "ring-2 ring-accent/60 sm:ring-0" : ""}`}
         />
         <GlowButton type="submit" size="md" disabled={!canSubmit} className="shrink-0 max-sm:w-full [&>span:last-child]:h-[45px] max-sm:[&>span:last-child]:w-full">
           {status === "submitting" ? "Registering…" : "Apply for uGNET"}
         </GlowButton>
       </div>
 
-      <p id="form-err" aria-live="polite" className="mt-2 min-h-[18px] text-[12.5px] font-semibold text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.6)]">
+      <p id="form-err" aria-live="polite" className="mt-2 min-h-[18px] text-[12.5px] font-bold text-accent">
         {mobileErr ? "Enter a valid 10-digit mobile number. " : ""}
         {nameErr ? "Please enter your full name." : ""}
       </p>
-      <p className="inline-block rounded-full bg-[rgba(10,30,60,0.42)] px-3.5 py-1 text-[12px] leading-[1.6] text-white/90 backdrop-blur-md">
+      <p className="text-[12.5px] font-medium leading-[1.6] text-white">
         By submitting, you agree to our{" "}
-        <a href="/terms-and-conditions" className="font-semibold text-white underline underline-offset-2">
+        <a href="/terms-and-conditions" className="font-bold text-white underline underline-offset-2 hover:text-white/80">
           Terms
         </a>{" "}
         and{" "}
-        <a href="/privacy-policy" className="font-semibold text-white underline underline-offset-2">
+        <a href="/privacy-policy" className="font-bold text-white underline underline-offset-2 hover:text-white/80">
           Privacy Policy
         </a>
         . Prefer to talk?{" "}
-        <a href="tel:18002108080" className="font-semibold text-white underline underline-offset-2">
+        <a href="tel:18002108080" className="font-bold text-white underline underline-offset-2 hover:text-white/80">
           1800 210 8080
         </a>
       </p>

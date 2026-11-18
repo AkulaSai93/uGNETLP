@@ -6,6 +6,7 @@ import { Curriculum } from "@/components/sections/Curriculum";
 import { Campuses } from "@/components/sections/Campuses";
 import { Admission } from "@/components/sections/Admission";
 import { Scholarships } from "@/components/sections/Scholarships";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Faqs } from "@/components/sections/Faqs";
 import { Footer } from "@/components/site/Footer";
 
@@ -22,6 +23,7 @@ export default function Page() {
         <Campuses />
         <Admission />
         <Scholarships />
+        <Testimonials />
         <Faqs />
       </main>
       <Footer />
