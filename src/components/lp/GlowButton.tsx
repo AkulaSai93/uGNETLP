@@ -32,7 +32,7 @@ export function GlowButton({
         className="cta-glow absolute left-1/2 top-1/2 aspect-square w-[160%] group-disabled:hidden"
       />
       <span
-        className={`relative z-[2] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[5px] bg-accent font-semibold text-white transition-colors group-hover:bg-accent-hover group-disabled:bg-accent/45 ${sizes[size]} ${fullWidth ? "w-full" : ""}`}
+        className={`relative z-[2] inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[3px] bg-accent font-semibold text-white transition-colors group-hover:bg-accent-hover group-disabled:bg-accent/45 ${sizes[size]} ${fullWidth ? "w-full" : ""}`}
       >
         {children}
         <ArrowRight className="size-4" strokeWidth={2.2} aria-hidden="true" />
@@ -40,7 +40,7 @@ export function GlowButton({
     </>
   );
 
-  const base = `group relative inline-flex overflow-hidden rounded-[6px] p-[1.5px] ${fullWidth ? "w-full" : ""} ${className}`;
+  const base = `group relative inline-flex overflow-hidden rounded-[4px] p-[1.5px] ${fullWidth ? "w-full" : ""} ${className}`;
 
   if (href) {
     return (

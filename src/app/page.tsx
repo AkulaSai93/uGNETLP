@@ -3,6 +3,7 @@ import { DataStrip } from "@/components/lp/DataStrip";
 import { Legacy } from "@/components/sections/Legacy";
 import { Pathways } from "@/components/sections/Pathways";
 import { Curriculum } from "@/components/sections/Curriculum";
+import { UgnetSection } from "@/components/lp/UgnetSection";
 import { Campuses } from "@/components/sections/Campuses";
 import { Admission } from "@/components/sections/Admission";
 import { Scholarships } from "@/components/sections/Scholarships";
@@ -20,6 +21,7 @@ export default function Page() {
         <Legacy />
         <Pathways />
         <Curriculum />
+        <UgnetSection />
         <Campuses />
         <Admission />
         <Scholarships />
